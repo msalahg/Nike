@@ -1,0 +1,207 @@
+*
+{
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body
+{
+    background:linear-gradient(#111,#222);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body::after
+{
+    content: '';
+    clip-path: circle(40% at right 70%);
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    position: absolute;
+    z-index: -1;
+
+}
+
+.container
+{   background-color: rgba(255, 255, 255, 0.1);
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content
+{   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    height: 80%;
+    width: 80%;
+}
+
+.content img
+{
+    width: 40%;
+
+}
+
+.content .text
+{
+    width: 35%;
+    color: white;
+    padding: 0 15px;
+}
+
+.text h2
+{
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.text p
+{
+    line-height: 20px;
+    font-size: 18px;
+}
+
+nav .logo
+{
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: 600;
+}
+ 
+
+ul
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style-type: none;
+}
+
+nav
+{
+    display: flex ;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding: 20px 0;
+    align-items: center;
+}
+
+ul li a
+{
+    color: white;  
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 6px;
+    font-size: 18px;
+    font-weight: 500;
+}
+nav ul li a:hover
+{
+    color: #e20202 ;
+}
+
+
+@media (max-width:1179px)
+{
+    .text h2
+    {
+
+        font-size: 35px;
+        
+    }
+}
+
+@media (max-width:950px)
+{
+    .content ,nav
+    {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    
+
+    .content .image,.content .text
+    {
+        width: 80%;
+
+    }
+
+    body::after
+    {
+        clip-path: circle(50% at bottom);
+    }
+
+    
+}
+
+
+@media (max-width:711px)
+{
+    .content .text h2
+    {
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .content .text p
+    {
+        font-size: 15px;
+        line-height: 20px;
+        
+    }
+
+    .content .image img
+    {
+        width: 100%;
+    }
+
+}
+
+@media (max-width:473px)
+{
+    nav ul li a
+    {
+        font-size: 15px;
+        font-weight: 550;
+    }
+}
+
+@media (max-width:430px)
+{
+    nav ul li a
+    {
+        font-size: 12px;
+        font-weight: 550;
+    }
+}
+
+@media (max-width:369px)
+{
+    nav ul li a
+    {
+        font-size: 11px;
+        font-weight: 500;
+    }
+}
+
+@media (max-width:337px)
+{
+    nav ul li a
+    {
+        font-size: 10px;
+        font-weight: 500;
+    }
+}
